@@ -16,17 +16,22 @@
   "scripts": {
     "build": "next build",
     "dev": "concurrently --raw \"next -p 4000\" \"wait-on -s 1 http://localhost:4000 && open-cli http://localhost:4000\"",
+    "preinstall": "npx npm-force-resolutions",
     "start": "next start"
   },
+  "resolutions": {
+    "node-fetch": "2.6.1"
+  },
   "dependencies": {
-    "@chakra-ui/core": "^1.0.0-rc.4",
+    "@chakra-ui/core": "^1.0.0-rc.5",
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
     "axios": "^0.20.0",
     "emotion": "^10.0.27",
     "emotion-server": "^10.0.27",
     "lodash": "^4.17.20",
-    "next": "^9.5.3",
+    "next": "^9.5.4-canary.23",
+    "npm-force-resolutions": "0.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
