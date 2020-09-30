@@ -9,21 +9,21 @@ export const ProbandoListas = () => {
   const toast = useToast();
   return (
     <>
-      {loremLista.map((v, k) => {
+      {loremLista.map((valor, indice) => {
         return (
           <Text
             border="1px solid black"
             width="fit-content"
             padding="5px"
-            key={k}
+            key={indice}
             cursor="pointer"
             onClick={() => {
               toast({
-                title: `Hiciste click en "${v}"`,
+                title: `Hiciste click en "${valor}"`,
               });
             }}
           >
-            {k} - {v}
+            {indice} - {valor}
           </Text>
         );
       })}

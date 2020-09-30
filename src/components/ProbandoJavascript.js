@@ -62,9 +62,11 @@ export const ProbandoJavascript = () => {
           string,
           stringCompuesto,
           arreglo,
-          arregloMapeado: arreglo.map((v) => v?.toString()),
-          arregloMapeadoATruthy: arreglo.map((v) => (v ? "truthy" : "falsy")),
-          arregloFiltrado: arreglo.filter((v) => !!v),
+          arregloMapeado: arreglo.map((valor) => valor?.toString()),
+          arregloMapeadoATruthy: arreglo.map((valor) =>
+            valor ? "truthy" : "falsy"
+          ),
+          arregloFiltrado: arreglo.filter((valor) => !!valor),
           objA,
           objB,
           sonObjsIguales: objA === objB,
@@ -72,6 +74,29 @@ export const ProbandoJavascript = () => {
         };
 
         console.log(objetoGrande);
+
+        const destructuringObj = {
+          a: 1,
+          b: 2,
+          c: "foo",
+          d: "bar",
+        };
+
+        const destructuringArray = [10, 20, 30];
+
+        const { a, b, c, d } = destructuringObj;
+
+        const [primero, segundo, tercero] = destructuringArray;
+
+        console.log({
+          a,
+          b,
+          c,
+          d,
+          primero,
+          segundo,
+          tercero,
+        });
       }}
       colorScheme="blue"
       width="250px"
