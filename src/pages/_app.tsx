@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Título</title>
+        <title>Aprendiendo Web Development INFO104</title>
       </Head>
       <ChakraProvider resetCSS={true} theme={customTheme}>
         <Component {...pageProps} />
