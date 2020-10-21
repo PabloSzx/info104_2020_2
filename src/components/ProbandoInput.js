@@ -1,4 +1,4 @@
-import { Button, Input, Stack, useToast } from "@chakra-ui/core";
+import { Button, Flex, Input, Stack, useToast } from "@chakra-ui/core";
 import { useState } from "react";
 import { HiCursorClick } from "react-icons/hi";
 
@@ -26,20 +26,35 @@ export const ProbandoInput = () => {
               setValueInput(value);
             }}
           />
-          <Button
-            colorScheme="red"
-            width="250px"
-            type="submit"
-            leftIcon={<HiCursorClick size="30px" />}
-            onClick={() => {
-              toast({
-                title: valueInput,
-                duration: 1000,
-              });
-            }}
-          >
-            Click me
-          </Button>
+          <Flex>
+            <Button
+              colorScheme="red"
+              width="250px"
+              type="submit"
+              leftIcon={<HiCursorClick size="30px" />}
+              onClick={() => {
+                toast({
+                  title: valueInput,
+                  duration: 1000,
+                });
+              }}
+            >
+              Click me
+            </Button>
+            <Button
+              colorScheme="blue"
+              width="250px"
+              //leftIcon={<HiCursorClick size="30px" />}
+              onClick={() => {
+                toast({
+                  title: "xdxd",
+                  duration: 1000,
+                });
+              }}
+            >
+              Otro
+            </Button>
+          </Flex>
         </Stack>
       </form>
     </>
