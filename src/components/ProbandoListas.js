@@ -33,7 +33,7 @@ export const ProbandoListas = () => {
   return (
     <>
       {loremLista.map((valor, indice) => {
-        return <LoremComponent valor={valor} indice={indice} />;
+        return <LoremComponent key={indice} valor={valor} indice={indice} />;
       })}
     </>
   );
