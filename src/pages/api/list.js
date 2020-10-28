@@ -18,5 +18,5 @@ export default async (req, res) => {
     date: new Date(),
   });
 
-  res.send(await collection.find({}).toArray());
+  res.send(JSON.stringify(await collection.find({}).toArray()));
 };

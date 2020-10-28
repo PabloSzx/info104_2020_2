@@ -2,6 +2,7 @@ import { Button, Text, useToast } from "@chakra-ui/core";
 import Axios from "axios";
 import { useState } from "react";
 import { MdHttp } from "react-icons/md";
+
 export const ProbandoAPI = () => {
   const [apiData, setApiData] = useState();
   const [isLoading, setIsLoading] = useState(false);
@@ -16,14 +17,19 @@ export const ProbandoAPI = () => {
         onClick={async () => {
           setIsLoading(true);
 
-          const { data } = await Axios.post("/api/hello_world");
+          // const { data } = await Axios.post("/api/hello_world", {
+          const { data } = await Axios.post("/api/list", {
+            nombre: "Pablo",
+          });
           setIsLoading(false);
 
-          setApiData(data);
+          const dataString = JSON.stringify(data);
+
+          setApiData(dataString);
 
           toast({
             status: "success",
-            title: data,
+            title: dataString,
             isClosable: true,
           });
         }}
